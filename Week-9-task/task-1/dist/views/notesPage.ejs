@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/notePage.css">
+</head>
+<body>
+    <header>
+        <h1 id="welcome">Welcome to Our Notes Page </h1>
+        <a href="/">Home</a>
+    </header>
+    <main>
+        <h2 id="heading">All Notes</h2>
+        <section class="notes-section">
+            <% publicNotes.forEach(note => { %>
+                <div class="note">
+                  <h2><%= "Title: " + note.title %></h2>
+                  <p><%= "Description: " + note.description %></p>
+                  <p><%= "Status: " + note.status %></p>
+                  <p><%= "DueDate: " + note.dueDate %></p>
+                </div>
+            <% }) %>
+        </section>
+        <div class="pagination">
+          <a id="prevPage" href="?page=<%= Math.max(current - 1, 0) %>" <% if (current > 1) { %>class="enabled"<% } else { %>class="disabled" disabled<% } %>>Previous</a>
+      
+          <a id="nextPage" href="?page=<%= Math.min(current + 1, pages) %>" <% if (current < pages) { %>class="enabled"<% } else { %>class="disabled" disabled<% } %>>Next</a>
+      </div>
+    </main>
+</body>
+</html>

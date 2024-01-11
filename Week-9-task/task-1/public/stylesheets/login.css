@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/images/nice.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+div {
+    width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(38, 24, 5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:  rgb(154, 108, 48);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: white;
+}
+
+input,
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: rgb(38, 24, 5);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background-color;
+    margin-top: 20px;
+}
+
+button:hover {
+    
+    background-color: rgb(154, 108, 48);
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    color:  rgb(154, 108, 48);
+}
+
+a {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.password-toggle {
+    position: relative;
+    margin-top: 15px; 
+}
+
+
+.password-toggle input {
+    width: 100% ; 
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+#togglePassword{
+    margin-top: -35px;
+    cursor: pointer;
+    margin-left: 320px;
+}
+#confirmPassword {
+    margin-top: -10px;
+}
+header{
+    position: relative;
+}
+header a {
+    position: absolute;
+    bottom: 100px;
+    left: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 20px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+

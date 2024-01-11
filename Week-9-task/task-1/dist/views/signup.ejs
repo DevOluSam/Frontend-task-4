@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+</head>
+<body>
+    <header>
+        <a href="/">Home</a>
+    </header>
+    <div>
+        <h1>Signup</h1>
+        <form action="/users/signup" method="POST" onsubmit="showSuccessModal();"; >
+            <label for="fullName"></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <label for="phone"></label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+
+            <label for="address"></label>
+            <input type="text" id="address" name="address" placeholder="Address" required>
+
+            <label for="gender"></label>
+            <select id="gender" name="gender" aria-placeholder="Gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="password"></label>
+
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <i id="togglePassword" class="fas fa-eye" onclick="togglePasswordVisibility('password')"></i>
+            <label for="confirmPassword"></label>
+
+                <input type="confirmPassword" id="confirmPassword" name="confirmPassword" placeholder="confirmPassword" required>
+                <i id="togglePassword" class="fas fa-eye" onclick="togglePasswordVisibility('confirmPassword')"></i>
+
+            <button type="submit">Signup</button>
+        </form>
+
+        <p>
+            Already have an account? <a href="/users/login">Login</a>
+        </p>
+    </div>
+    <!-- <div id="successModal" class="modal">
+        <p>User created successfully!</p>
+    </div> -->
+    <div id="successModal" class="modal">
+        <p id="successMessage"></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <script src="/javascripts/signup.js"></script>
+</body>
+</html>
